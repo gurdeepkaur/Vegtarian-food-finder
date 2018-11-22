@@ -1,0 +1,90 @@
+<div class="main  " ng-controller="mainController">
+   <nav class="navbar navbar-default navbar-fixed">
+       <div class="container-fluid col-sm-12">
+           <!-- Brand and toggle get grouped for better mobile display -->
+           <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                   <span class="sr-only">Toggle navigation</span>
+                   <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="#">Foodie</a>
+           </div>
+           <!-- Collect the nav links, forms, and other content for toggling -->
+           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#!/home">Home</a></li>
+                  <li><a href="#!/about">About</a></li>
+                  <li><a href="#!/">Logout</a></li>
+               </ul>
+           </div>
+           <!-- /.navbar-collapse -->
+       </div>
+        <!-- /.container-fluid -->
+   </nav>
+
+   <div class="ui container">
+           <div class="hero">
+           <!-- this is like the tagline of the app foodie -->
+               <p>Find the best restaurants in town</p>
+           </div>
+           <div class="search-bar">
+               <form>
+                   <div class="input-wrapper ">
+                   <!-- this is the search box where the user can search for any restaurant and cuisines of their choice -->
+                       <input type="text" class="form-control" placeholder="Search..." ng-model="query">
+                   </div>
+                   <!-- this is the search button -->
+                   <button type="submit" class="btn btn-default">Search</button>
+               </form>
+           </div>
+           <!-- here ng-repeat is used in order to display the information of each restaurant present in the maincontroller -->
+           <div  ng-repeat="restaurant in restaurants | filter:query" class="restaurant">
+               <div class="rest-wrapper">
+                   <div class="image ">
+                       <!-- this will display the image of any dish of the restaurant -->
+                       <img ng-src="{{restaurant.image}}" height="100" width="100">
+                   </div>
+                   <div class="rest-info">
+                       <div class="rest-category">
+                           <!-- this will display the category of the restaurant such as dining , bar, etc-->
+                           <small>{{restaurant.category}} </small>
+                       </div>
+                       <div class="rest-name">
+                           <!-- this will display the name of the restaurant -->
+                           <a ng-href="#!/restaurant/{{restaurant.id}}"><strong>{{restaurant.name}}</strong></a>
+                       </div>
+                       <div>
+                           <!-- this will display the location of the restaurant -->
+                           <strong> {{restaurant.location}}</strong>
+                       </div>
+                       <div class="rest-address">
+                           <!-- this will display the full address of the restaurant -->
+                            {{restaurant.address}}
+                       </div>
+                   </div>
+               </div>
+               <div class="rest-extra">
+                   <div class="type">
+                       <!-- this will display the extra details of the restaurant such as cuisines, timing, etc -->
+                       <div><small>Cuisines:</small></div>
+                       <div><small>Cost for Two: </small></div>
+                       <div><small>Hours:</small></div>
+                   </div>
+                   <div class="value">
+                   <!-- this will display the values of extra details of the restaurant such as cuisines, timing, etc -->
+                       <div>{{restaurant.cuisines}}</div>
+                       <!--  ₹ -->Rs <!-- ₹  -->{{restaurant.cost | number}}
+                       <div>{{restaurant.hours}}</div>
+                   </div>
+               </div>
+               <div class="rating">
+                   <!-- this will display the vote for the restaurant  -->
+                    <strong>{{restaurant.vote}}</strong>
+               </div>
+               <!-- this is just a button to order online food from the app -->
+               <div class="order ">Order Online</div>
+           </div>
+       </div>
+   </div>

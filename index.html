@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='foodieApp'>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- app contains a title 'foodie' and a logo for the app- foodie -->
+    <title>Foodie</title>
+    <!--  logo for the app - foodie -->
+    <link href="http://areyouafoodie.com/wp-content/uploads/2017/04/Foodie-Logo-FN.png" >
+    <!-- link to add bootstrap     -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/angular.min.js"></script>
+    <!-- script contains the code that is required for routing which is required in single page application SPA -->
+   <script src="https://code.angularjs.org/1.6.5/angular-route.js"></script>
+    <style>
+        input.ng-invalid.ng-dirty
+        {
+            border: 1px solid red;
+        }
+   </style>
+</head>
+
+<body id="app">
+    <!-- ng-view directive acts as a container to put the content provided by the routing. -->
+    <div ng-view></div>
+    <!-- following are the scripts that are imported in the foodie app -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

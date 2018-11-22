@@ -1,0 +1,263 @@
+/***** Css for Foodie app******/
+*,
+*:after,
+*:before
+{
+    box-sizing: border-box;
+}
+
+/***** Css for body of the app ******/
+body
+{
+    background-color: #F3F3E8;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.hero
+{
+  background-image: url('hero img.jpeg');
+  background-size: cover;
+  min-height: 300px;
+  border-radius: 4px;
+  color: #ccff33;
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#app .navbar
+{
+    color: white;
+    background-color: #cb202d;
+}
+
+#app .navbar a
+{
+    color: white;
+}
+
+.hidden
+{
+    display: none;
+}
+
+/***** Css for login page of the app******/
+#app .login
+{
+  background-image: url('login.jpeg');
+  background-size: cover;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/***** Css for login form in the app ******/
+#app .login-form
+{
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color:#99cccc;
+  padding: 1rem;
+  padding-top: 0;
+  border: 5px solid #990033 ;
+  border-radius: 10px;
+}
+#app .head
+{
+   font-family: Matura MT Script Capitals;
+   text-align: center;
+   color: black;
+   font-size: 80px;
+}
+.hero {
+    margin-bottom: 2rem;
+    border:5px solid black;
+    border-radius: 10px;
+
+}
+
+.main {
+  background-image: url('main bg img.jpeg');
+  background-size: cover;
+}
+/***** Css for restaurant ******/
+.restaurants
+{
+  background-color:#cccc99;
+  position: relative;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 4px;
+}
+.restaurant
+{
+  background-color:#cccc99;
+  position: relative;
+  width:700px;
+  margin-left:auto;
+  margin-right: auto;
+  padding-top: 20px;
+   border-radius:6px;
+  margin-bottom: 20px;
+margin-top:30px;
+}
+
+/***** Css for details of restaurant******/
+.rest-wrapper
+{
+    display: flex;
+    font-family: sans-serif;
+}
+
+.rest-wrapper .image
+{
+    margin-right: 1rem;
+}
+
+.rest-wrapper .image img
+{
+    border-radius: 4px;
+}
+
+.rest-wrapper .rest-name
+{
+    font-size: 24px;
+    color: #cb202d;
+}
+
+.rest-wrapper .rest-category
+{
+    color: #89959B;
+    text-transform: uppercase;
+}
+
+.rest-wrapper .rest-address
+{
+    color: #89959B;
+}
+
+.rest-extra
+{
+    display: flex;
+    margin-top: 1rem;
+    border-top: 1px solid #e7e7e7;
+    padding: 1rem;
+}
+
+.rest-extra .type
+{
+    text-transform: uppercase;
+     color: #89959B;
+     flex: none;
+     margin-right: 2rem;
+}
+
+.restaurants .rating, .restaurant .rating
+{
+    color: white;
+    background-color: #5BA829;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 18px;
+    border-radius: 4px;
+    letter-spacing: 2px;
+}
+
+/***** Css for search bar ******/
+.search-bar
+ {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+}
+
+.search-bar form
+{
+    display: flex;
+    align-items: center;
+}
+
+.search-bar form .input-wrapper
+{
+   flex: 1;
+   margin-right: 1rem;
+}
+
+
+/***** Css for best dish ******/
+.bestDish .button
+{
+    display: inline-block;
+    background-color:#cb202d;
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/***** Css for about page ******/
+.ui[class*="center aligned"].segment
+{
+   text-align: center;
+}
+
+.ui.basic.segment
+{
+   box-shadow: none;
+   border-radius: 0;
+}
+
+.first
+{
+   padding-bottom: 10px;
+}
+h1
+{
+   min-height: 1rem;
+   font-size: 2rem;
+}
+.bold
+{
+   font-weight: 700;
+}
+
+.second
+{
+   margin-bottom: 0!important;
+}
+
+p
+{
+   margin: 0 0 1em;
+   line-height: 1.4285em;
+}
+
+.fontsize2
+{
+   font-size: 18px;
+}
+
+
+
+
+/***** Css to check for the dish whether it is veg/non-veg ******/
+.vegnonveg
+{
+        width: 125px;
+        height: 125px;
+        position: absolute;
+        top: 160px;
+
+}
